@@ -1,4 +1,4 @@
-package com.burakerdem.springboot;
+package com.burakerdem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
