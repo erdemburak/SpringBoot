@@ -1,6 +1,6 @@
 package com.burakerdem.controller;
 
-import com.burakerdem.bean.BeanConfig;
+import com.burakerdem.controller.bean.BeanConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

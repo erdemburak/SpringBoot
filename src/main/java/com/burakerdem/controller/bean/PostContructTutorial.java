@@ -1,4 +1,4 @@
-package com.burakerdem.bean;
+package com.burakerdem.controller.bean;
 
 import com.burakerdem.controller.BeanController;
 import org.springframework.beans.factory.annotation.Autowired;

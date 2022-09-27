@@ -1,4 +1,4 @@
-package com.burakerdem.bean;
+package com.burakerdem.controller.bean;
 
 import com.burakerdem.dto.BeanDto;
 import org.springframework.context.annotation.Bean;
