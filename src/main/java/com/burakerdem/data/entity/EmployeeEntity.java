@@ -1,4 +1,4 @@
-package com.burakerdem.entity;
+package com.burakerdem.data.entity;
 
 import lombok.Builder;
 import lombok.Data;
