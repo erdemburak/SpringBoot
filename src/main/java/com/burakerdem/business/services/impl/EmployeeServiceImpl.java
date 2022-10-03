@@ -53,8 +53,8 @@ public class EmployeeServiceImpl implements EmployeeServices {
     // http:/localhost:8080/api/v1/employees/1
     @GetMapping("/employees/{id}")
     @Override
-    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable Long id) throws Throwable {
-        EmployeeEntity employee = (EmployeeEntity) employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Empleyee not exist with id " + id));
+    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable(name = "id") Long id) throws Throwable {
+        EmployeeEntity employee = employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Empleyee not exist with id " + id));
         EmployeeDto employeeDto = EntityToDto(employee);
         return ResponseEntity.ok(employeeDto);
     }
@@ -63,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeServices {
     // http:/localhost:8080/api/v1/employees
     @PutMapping("/employees/{id}")
     @Override
-    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable Long id, @RequestBody EmployeeDto employeeDetails) throws Throwable {
+    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable(name = "id") Long id, @RequestBody EmployeeDto employeeDetails) throws Throwable {
         EmployeeEntity employeeEntity = DtoToEntity(employeeDetails); // ModelMapper
         EmployeeEntity employee = (EmployeeEntity) employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Empleyee not exist with id " + id));
         employee.setFirstName(employeeEntity.getFirstName());
@@ -80,7 +80,7 @@ public class EmployeeServiceImpl implements EmployeeServices {
     // http:/localhost:8080/api/v1/employees/1
     @DeleteMapping("/employees/{id}")
     @Override
-    public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable Long id) throws Throwable {
+    public ResponseEntity<Map<String, Boolean>> deleteEmployee(@PathVariable(name = "id") Long id) throws Throwable {
         EmployeeEntity employee = (EmployeeEntity) employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not exist wit id " + id));
         employeeRepository.delete(employee);
         Map<String, Boolean> response = new HashMap<>();
