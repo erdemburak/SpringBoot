@@ -1,6 +1,6 @@
 package com.burakerdem.business.services.impl;
 
-import com.burakerdem.business.dto.EmployeeDto;
+import com.burakerdem.business.services.dto.EmployeeDto;
 import com.burakerdem.business.services.EmployeeServices;
 import com.burakerdem.data.entity.EmployeeEntity;
 import com.burakerdem.data.repository.EmployeeRepository;

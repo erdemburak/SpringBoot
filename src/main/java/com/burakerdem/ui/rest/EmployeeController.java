@@ -1,8 +1,7 @@
 package com.burakerdem.ui.rest;
 
-import com.burakerdem.business.dto.EmployeeDto;
+import com.burakerdem.business.services.dto.EmployeeDto;
 import com.burakerdem.business.services.EmployeeServices;
-import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.burakerdem.business.dto;
+package com.burakerdem.business.services.dto;
 
 //DTO - Data Transfer Object
 

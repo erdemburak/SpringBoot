@@ -1,6 +1,6 @@
 package com.burakerdem.business.services;
 
-import com.burakerdem.business.dto.EmployeeDto;
+import com.burakerdem.business.services.dto.EmployeeDto;
 import com.burakerdem.data.entity.EmployeeEntity;
 import org.springframework.http.ResponseEntity;
 
